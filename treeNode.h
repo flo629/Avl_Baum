@@ -10,11 +10,11 @@ class treeNode {
 
 public:
     treeNode(int key);
+
+    ~treeNode();
     int key;
     treeNode* left;
     treeNode* right;
-    int balance;
-    int height;
 
 };
 

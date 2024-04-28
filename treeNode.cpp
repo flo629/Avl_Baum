@@ -11,3 +11,10 @@ treeNode::treeNode(int key) {
     balance = 0;
     height = 0;
 }
+
+treeNode::~treeNode() {
+
+    delete left;
+    delete right;
+
+}
