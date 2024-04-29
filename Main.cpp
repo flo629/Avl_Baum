@@ -68,9 +68,9 @@ int main(int argc, char** argv)
 {
     Tree* tree = new Tree();
 
-    cout << argc << endl;
+    //cout << argc << endl;
     for(int i = 0; i < argc; i++) {
-        cout << argv[i] << endl;
+        //cout << argv[i] << endl;
     }
 
     tree->root = readfile(tree, argv[1]);
@@ -80,14 +80,14 @@ int main(int argc, char** argv)
         tree->printStats();
     } else {
 
-        tree->printBalance(tree->root);
-        tree->printStats();
+        //tree->printBalance(tree->root);
+        //tree->printStats();
 
         ifstream myfile(string("..//input_files//") + argv[2] + ".txt");
         int lines = count(std::istreambuf_iterator<char>(myfile),
                    std::istreambuf_iterator<char>(), '\n') +1;
 
-        cout << "Lines" << lines << endl;
+        //cout << "Lines" << lines << endl;
 
         string myLine;
         int key = 0;
@@ -117,7 +117,9 @@ int main(int argc, char** argv)
             int result = subtreeSearch(tree, tree->root, subTree->root);
 
             if(result) {
-                cout << "subtree found" << endl;
+                cout << "Subtree found" << endl;
+            } else {
+                cout << "Subtree not found!" << endl;
             }
         }
 

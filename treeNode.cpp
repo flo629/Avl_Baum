@@ -8,8 +8,6 @@ treeNode::treeNode(int key) {
     this->key = key;
     left = nullptr;
     right = nullptr;
-    balance = 0;
-    height = 0;
 }
 
 treeNode::~treeNode() {
